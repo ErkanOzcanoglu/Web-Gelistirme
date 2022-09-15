@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //function constructor
+        function personES5(name, job, birthday) {
+            this.name = name;
+            this.job = job;
+            this.birthday = birthday;
+            // this.ageCalc = function () {
+            //     let date = new Date().getFullYear();
+            //     return date - this.birthday;
+            // }
+        }
+
+        personES5.prototype.ageCalc = function () {
+            let date = new Date().getFullYear();
+            return date - this.birthday;
+        }
+        let erol = new personES5("Erol G", "Slave", "2002");
+        let emre = new personES5("Emre gay", "Slave", "2001");
+        console.log(erol.ageCalc());
+        console.log(erol);
+        console.log(emre);
+
+
+
+        //class
+        class personES6 {
+            constructor(name, job, birthday) {
+                this.name = name;
+                this.job = job;
+                this.birthday = birthday;
+                console.log("obje created");
+            }
+            ageCalc() {
+                let date = new Date().getFullYear();
+                return date - this.birthday;
+            }
+        }
+        let person1 = new personES6("Erol G", "Slave", "2002");
+        let person2 = new personES6("Emre gay", "Slave", "2001");
+        console.log(person1);
+        console.log(person1.ageCalc());
+        console.log(person2);
+        console.log(person2.ageCalc());
+    </script>
+</body>
+
+</html>

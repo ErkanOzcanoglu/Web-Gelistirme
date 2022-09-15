@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // array destructing
+        let user = ["Erol", "G", "Adana", "Çukurova", "31000"];
+
+        // let firstNAme = name[0];
+        // let lastNAme = name[1];
+
+        // let [firstNAme, lastNAme] = name;
+        // let [firstNAme, lastNAme] = "Erol G".split(" ");
+
+        // let [firstNAme, lastNAme, city, town] = user;
+        // console.log(firstNAme, lastNAme, city, town);
+
+        let [firstNAme, lastNAme, ...adress] = user;
+
+        console.log(firstNAme, lastNAme, adress);
+
+        // object destructing
+        let product = {
+            name: "Laptop",
+            price: "1000",
+            brand: "Lenovo",
+            // sell: true
+        }
+        let { name, price, brand, sell = false } = product;
+        console.log(name, price, brand, sell);
+
+
+        function showPro(name, price, brand, sell = false) {
+            console.log(name, price, brand, sell);
+        }
+
+        showPro("Laptop", "1000", "Lenovo", true);;
+
+    </script>
+
+
+</body>
+
+</html>

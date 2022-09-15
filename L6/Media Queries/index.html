@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: green;
+      }
+
+      h1 {
+        display: none;
+      }
+      /* telephone */
+      @media (max-width: 575px) {
+        #phone h1 {
+          display: block;
+        }
+        body {
+          background-color: blue;
+        }
+      }
+      /* landscape */
+      @media (min-width: 568px) and (max-width: 767px) {
+        #landscape h1 {
+          display: block;
+        }
+        body {
+          background-color: grey;
+        }
+      }
+      /* tablets */
+      @media (min-width: 768px) and (max-width: 991px) {
+        #tablets h1 {
+          display: block;
+        }
+        body {
+          background-color: red;
+        }
+      }
+
+      /* dekstop */
+      @media (min-width: 992px) and (max-width: 1199px) {
+        #dekstop h1 {
+          display: block;
+        }
+        body {
+          background-color: yellow;
+        }
+      }
+
+      /* large dekstop */
+      @media (min-width: 1200px) and (max-width: 1399px) {
+        #large h1 {
+          display: block;
+        }
+        body {
+          background-color: orange;
+        }
+      }
+
+      /* large dekstop */
+      @media (min-width: 1400px) {
+        #xlarge h1 {
+          display: block;
+        }
+        body {
+          background-color: pink;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="phone"><h1>Phone</h1></div>
+    <div id="landscape"><h1>Landscape</h1></div>
+    <div id="tablets"><h1>Tablets</h1></div>
+    <div id="dekstop"><h1>Dekstop</h1></div>
+    <div id="large"><h1>Large</h1></div>
+    <div id="xlarge"><h1>xlarge</h1></div>
+  </body>
+</html>

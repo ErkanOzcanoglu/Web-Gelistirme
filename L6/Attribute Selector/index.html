@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Attribute Selector */
+      /* a[target] {
+        background-color: red;
+      }
+      a[class] {
+        background-color: blue;
+      }
+      [class] {
+        background-color: blue;
+      } */
+      /* /////////////////////////////////////////// */
+
+      /* Attribute '*' Selector */
+
+      /* [class*="active"] {
+        background-color: blue;
+      } */
+
+      /* Attribute '~' Selector */
+
+      /* [class~="active"] {
+        background-color: blue;
+      } */
+
+      /* Attribute '|' Selector */
+
+      /* [class|="active"] {
+        background-color: blue;
+      } */
+      /* Attribute '^' Selector */
+
+      /* [class^="active"] {
+        background-color: blue;
+      } */
+
+      /* Attribute '$' Selector */
+
+      [class$="active"] {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="active">text</span>
+    <nav>
+      <a href="" target="_blank">home</a>
+      <a href="" class="active">about</a>
+      <a href="" class="link">contact</a>
+    </nav>
+  </body>
+</html>

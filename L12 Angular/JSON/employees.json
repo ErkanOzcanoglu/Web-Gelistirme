@@ -1,0 +1,20 @@
+[
+    {
+        "firstname": "Bora",
+        "lastname": "G",
+        "age": "19",
+        "retired": false
+    },
+    {
+        "firstname": "Erol",
+        "lastname": "G",
+        "age": "19",
+        "retired": false
+    },
+    {
+        "firstname": "Erkan",
+        "lastname": "Kral",
+        "age": "21",
+        "retired": false
+    }
+]

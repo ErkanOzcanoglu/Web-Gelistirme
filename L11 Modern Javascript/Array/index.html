@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const numbers = [1, 56, 8, 9, 8, 4];
+        const products = [
+            { productName: "laptop", price: 1000 },
+            { productName: "mouse", price: 50 },
+            { productName: "keyboard", price: 100 },
+            { productName: "monitor", price: 500 },
+        ];
+        // const oddNumbers = [];
+        // for (let number of numbers) {
+        //     if (number % 2 == 1) {
+        //         oddNumbers.push(number);
+        //         // console.log(number);
+        //     }
+        // }
+        // console.log(oddNumbers);
+
+        // const oddNumber = numbers.filter((numbers) => numbers % 2 == 1);
+        const oddNumber = numbers.map((numbers) => numbers % 2 == 1);
+        console.log(oddNumber);
+
+
+        const pro = products.map(product => product);
+        const pro2 = products.map(product => product.productName);
+        const pro3 = products.filter(product => product.price > 100);
+        const pro4 = products.filter(product => product.price > 100).map(product => product.productName);
+        const pro5 = products.find(product => product.price < 100);
+        const pro6 = products.findIndex(product => product.price < 100);
+
+
+
+
+        console.log(pro);
+        console.log(pro2);
+        console.log(pro3);
+        console.log(pro4);
+        console.log(pro5);
+        console.log(pro6);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

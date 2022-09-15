@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        const students = new Map();
+
+        students.set(1, "ali yılmaz");
+        students.set("4578547858", "efe baş");
+        students.set(true, "ali candan");
+
+
+        console.log(students.get(1));
+        console.log(students.get("4578547858"));
+        console.log(students.get(true));
+
+        let sonuc;
+        sonuc = students.size; // size değeri
+        sonuc = students.has(1); // with boolean
+        // students.delete(1); // de lete
+        sonuc = students.size; // size değeri
+        // students.clear(); // clear
+
+        console.log(sonuc);
+
+        // for (let x of students.keys()) {
+        //     console.log(x);
+        // }
+
+        // for (let x of students.values()) {
+        //     console.log(x);
+        // }
+
+        // for (let x of students.entries()) {
+        //     console.log(x[1]);
+        // }
+
+        for (let [key, value] of students.entries()) {
+            console.log(key, value);
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=,, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //ES5
+        // function hi() {
+        //     console.log("hello");
+        // }
+        var hiES5 = function (isim) {
+            console.log("hello " + isim);
+        }
+        hiES5("erol");
+
+        //ES6 - arrow function
+        // const hiES6 = (name) => console.log("hello "+name);
+        const hiES6 = (name) => {
+            console.log("hello " + name);
+        }
+
+
+        hiES6("erolG");
+
+        var sumES5 = function (a, b) {
+            return a + b;
+        }
+        console.log("sum: " + sumES5(10, 20));
+
+        var sumES6 = (a, b) => a + b;
+        console.log("sum:", sumES6(10, 21));
+
+
+
+    </script>
+</body>
+
+</html>

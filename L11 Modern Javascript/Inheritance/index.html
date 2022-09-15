@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        // person => p1,p2
+
+        // stundent => s1,s2
+
+        // teacher => t1,t2
+
+        //parent 
+        class Person {
+            constructor(name, bhitday) {
+                console.log("Person constructor");
+                this.name = name;
+                this.birthday = bhitday;
+            }
+            calcAge() {
+                let date = new Date().getFullYear();
+                return date - this.birthday;
+            }
+
+            introduce() {
+                return `${this.name} is ${this.calcAge()} years old`;
+            }
+        }
+        // child
+        class Student extends Person {
+            constructor(name, bhirtday, schoolNumber) {
+                console.log("Student constructor");
+                super(name, bhirtday);
+                this.schoolNumber = schoolNumber;
+            }
+            workHard() {
+                return `${this.name} is working hard`;
+            }
+            introduce() {
+                return `${this.name} is ${this.calcAge()} years old and my school number is ${this.schoolNumber}`;
+            }
+        }
+        class Teacher extends Person {
+            constructor(name, bhirtday, brans) {
+                console.log("Teacher constructor");
+                super(name, bhirtday);
+                this.brans = brans;
+            }
+            workHard() {
+                return `${this.name} is working hard`;
+            }
+            introduce() {
+                return `${this.name} is ${this.calcAge()} years old and my brans is ${this.brans}`;
+            }
+        }
+        let person = new Person("Erol", 2002);
+        let stundent = new Student("Emre", 2001, 123);
+        let teacher = new Teacher("Çiğdem Turhan", 1975, "Computer");
+
+        console.log(person.calcAge());
+        console.log(stundent.calcAge());
+        console.log(stundent.workHard());
+        console.log(person.introduce());
+        console.log(stundent.introduce());
+        console.log(teacher.introduce());
+
+    </script>
+</body>
+
+</html>

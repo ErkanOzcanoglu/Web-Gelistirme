@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const msj = ["my", "name", "is", "ErolG"];
+
+        // let final = "";
+
+        // for (let x of msj) {
+        //     final += x + " ";
+        // }
+        // console.log(final);
+
+        // console.log(...msj);
+
+        // const serie = ["one", "two"];
+        // const serie2 = ["three", "four"];
+        // const serie3 = ["serie", "serie2"];
+        // const serie4 = [...serie, ...serie2, "five"];
+        // console.log(serie3);
+        // console.log(serie4);
+
+        const numbers1 = [1, 2, 3];
+        // const numbers2 = numbers1;
+        const numbers2 = [...numbers1];
+        numbers1[0] = 10;
+        console.log(numbers1, numbers2);
+
+        const user = {
+            userName: "Erol",
+            userLastName: "G"
+
+        }
+        const city = {
+            cityName: "Adana"
+        }
+
+        console.log({ ...user, ...city });
+
+
+        //rest parameter
+        function sum(...args) {
+            let sonuc = 0;
+            for (let number of args) {
+                sonuc += number;
+            }
+            return sonuc;
+        }
+        console.log(sum(1, 2, 3, 4, 5));
+        console.log(sum(1, 2, 3, 4));
+
+        function showInfo(name, surname, ...city) {
+            console.log(name, surname, city);
+        }
+        showInfo("Erol", "G", "Adana", "mal");
+    </script>
+</body>
+
+</html>
